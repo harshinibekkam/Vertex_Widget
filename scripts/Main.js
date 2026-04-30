@@ -10,13 +10,18 @@ function executeWidgetCode() {
        //Do the work ...  
        console.log('Received from: ', data.sender, 'width the following message: ', data.messsage);
       console.log('Data:',data);
+myWidget.STREAM_KEY=data.streamkey;
+myWidget.CLIENT_ID=data.clientid;
+
+                    myWidget.loadViewer();
+               
        // Unsubscribing sub to avoid getting more messages
        API.unsubscribe(sub);
     });
         var myWidget = {
 
-            STREAM_KEY: "0bWDdtbttgIVk-yiSgzQ-6GUxyM0xifVWz2b",
-            CLIENT_ID: "08CEF7AE6E675F48D2C802AC0E6AFD183CC95553AA6889F032DD29AB070E40C0",
+           // STREAM_KEY: "0bWDdtbttgIVk-yiSgzQ-6GUxyM0xifVWz2b",
+            //CLIENT_ID: "08CEF7AE6E675F48D2C802AC0E6AFD183CC95553AA6889F032DD29AB070E40C0",
 
             selectedItemId: null,
 
@@ -130,9 +135,7 @@ function executeWidgetCode() {
                     </div>
                 `;
 
-                setTimeout(() => {
-                    myWidget.loadViewer();
-                }, 300);
+                
             }
         };
 
