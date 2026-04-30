@@ -21,7 +21,7 @@ function executeWidgetCode() {
         document.querySelector("h1").style.display = "none";
         const box = document.getElementById("cornerBox");
     box.textContent = data.objectDisplayName;  
-    box.style.display = "block"; 
+    
         myWidget.loadViewer();
       }
       
@@ -137,7 +137,7 @@ function executeWidgetCode() {
  <h1 style="margin:0;height:100vh;display:flex;justify-content:center;align-items:center;font-size:clamp(2rem,8vw,6rem);text-align:center;">Send any data to Vertex</h1> 
                          
  <div style="flex:1;">
- <h2 id="cornerBox" style="position:fixed;top:10px;right:10px;display:none;font-size:18px;">
+ <h2 id="cornerBox" style="position:fixed;top:10px;right:10px;font-size:18px;">
 </h2>
                             <vertex-viewer id="vertexViewer"
                                 style="width:100%;height:100%;">
