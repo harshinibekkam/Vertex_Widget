@@ -17,7 +17,11 @@ function executeWidgetCode() {
       myWidget.STREAM_KEY = data.streamkey;
       myWidget.CLIENT_ID = data.clientid;
 
-      myWidget.loadViewer();
+      if(data.streamkey != null){
+        document.querySelector("h1").style.display = "none";
+        myWidget.loadViewer();
+      }
+      
 
       // Unsubscribing sub to avoid getting more messages
       // API.unsubscribe(sub);
