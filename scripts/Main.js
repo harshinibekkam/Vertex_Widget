@@ -16,7 +16,7 @@ myWidget.CLIENT_ID=data.clientid;
                     myWidget.loadViewer();
                
        // Unsubscribing sub to avoid getting more messages
-       API.unsubscribe(sub);
+      // API.unsubscribe(sub);
     });
         var myWidget = {
 
@@ -126,7 +126,8 @@ myWidget.CLIENT_ID=data.clientid;
 
                 contentDiv.innerHTML = `
                     <div style="width:100vw;height:100vh;display:flex;flex-direction:column;">
-                        <h4>Vertex Viewer</h4>
+                         <h1 style='position: absolute; top: 50%; left: 0; right: 0;  margin-top: -9px;font-size: 100px;text-align: center;'>Send any data to Vertex</h1>
+ 
                         <div style="flex:1;">
                             <vertex-viewer id="vertexViewer"
                                 style="width:100%;height:100%;">
