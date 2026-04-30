@@ -17,13 +17,21 @@ function executeWidgetCode() {
       myWidget.STREAM_KEY = data.streamkey;
       myWidget.CLIENT_ID = data.clientid;
 
-      if(data.streamkey != null){
-        document.querySelector("h1").style.display = "none";
-        const box = document.getElementById("cornerBox");
-    box.textContent = data.objectDisplayName;  
-    
-        myWidget.loadViewer();
-      }
+     if(data.streamkey != null){
+
+    document.querySelector("h1").style.display = "none";
+
+    const box = document.getElementById("cornerBox");
+    box.textContent = data.objectDisplayName;
+
+    // ✅ ADD THIS LINE (your requirement)
+    const nameEl = document.getElementById("objectName");
+    if (nameEl) {
+        nameEl.textContent = data.objectDisplayName || "No Name";
+    }
+
+    myWidget.loadViewer();
+}
       
 
       // Unsubscribing sub to avoid getting more messages
