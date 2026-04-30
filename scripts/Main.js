@@ -142,9 +142,8 @@ function executeWidgetCode() {
 
         contentDiv.innerHTML = `
                     <div style="width:100vw;height:100vh;display:flex;flex-direction:column;">
- <h1 style="margin:0;height:100vh;display:flex;justify-content:center;align-items:center;font-size:clamp(2rem,8vw,6rem);text-align:center;">Send any data to Vertex</h1> 
-                         
- <div style="flex:1;">
+<h1 style="margin:0;display:flex;justify-content:center;align-items:center;">                         
+<div style="width:100%;height:100%;display:flex;flex-direction:column;">
  <h2 id="cornerBox" style="position:fixed;top:10px;right:10px;font-size:18px;">
 </h2>
                             <vertex-viewer id="vertexViewer"
